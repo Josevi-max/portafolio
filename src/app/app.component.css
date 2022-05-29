@@ -1,0 +1,11 @@
+.ml-260 {
+    margin-left: 260px;
+}
+
+
+
+@media (max-width: 768px) {
+    .ml-260 {
+        margin-left: 0;
+    }
+}

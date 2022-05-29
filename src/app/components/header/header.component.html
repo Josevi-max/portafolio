@@ -1,0 +1,18 @@
+<ng-template #content let-offcanvas>
+    <div>
+        <button type="button" class="btn btn-dark cross" aria-label="Close" (click)="offcanvas.dismiss('Cross click')">
+            <i class="fas fa-times"></i>
+        </button>
+        <app-menu (click)="offcanvas.dismiss('Cross click')"></app-menu>
+    </div>
+</ng-template>
+
+<button class="btn btn-dark burguer-menu" (click)="open(content)">
+    <i class="fas fa-bars"></i>
+</button>
+
+<app-settings></app-settings>
+
+<div id="menu">
+    <app-menu></app-menu>
+</div>

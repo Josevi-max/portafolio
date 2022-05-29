@@ -1,0 +1,120 @@
+<div class="container">
+    <div class="row">
+
+        <app-title-effect [text]="'contact' | translate" [color]="specialActualColor"></app-title-effect>
+        <p class="text-center">{{'contact_info' | translate}}</p>
+        <div class="row mt-4 info-desktop">
+            <div class="col-lg-4 text-center">
+                <i class="fas fa-map-marker-alt text-{{specialActualColor}} icon bg-transparent"></i>
+                <h5 class="card-title fw-bold">{{'Location' | translate}}: </h5>
+                <p class="card-text">Aguadulce, Almería 04720</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fas fa-envelope text-{{specialActualColor}} icon bg-transparent"></i>
+                <h5 class="card-title fw-bold">Email: </h5>
+                <p class="card-text">joseevicentefernandez@gmail.com</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fas fa-phone text-{{specialActualColor}} icon bg-transparent"></i>
+                <h5 class="card-title fw-bold">{{'phone' | translate}}: </h5>
+                <p class="card-text">+34 633355727</p>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-3 g-4 info-mobile">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="row g-0">
+                        <div class="col-3 center-content">
+                            <i class="fas fa-map-marker-alt text-{{specialActualColor}} icon float-start"></i>
+                        </div>
+                        <div class="col-9">
+                            <div class="card-body text-white">
+                                <h5 class="card-title fw-bold">{{'Location' | translate}}: </h5>
+                                <p class="card-text">Aguadulce, Almería 04720</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="row g-0">
+                        <div class="col-3 center-content">
+                            <i class="fas fa-envelope text-{{specialActualColor}} icon float-start"></i>
+                        </div>
+                        <div class="col-9">
+                            <div class="card-body text-white">
+                                <h5 class="card-title fw-bold">Email: </h5>
+                                <p class="card-text">Joseevicentefernandez@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="row g-0">
+                        <div class="col-3 center-content">
+                            <i class="fas fa-phone text-{{specialActualColor}} icon float-start"></i>
+                        </div>
+                        <div class="col-9">
+                            <div class="card-body text-white">
+                                <h5 class="card-title fw-bold">{{'phone' | translate}}: </h5>
+                                <p class="card-text">+34 633355727</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div *ngIf="errorForm && !sendForm" class="alert alert-danger col-11 mx-auto" role="alert">
+                {{'error_form' | translate}}
+            </div>
+            <div *ngIf="sendForm" class="alert alert-success" role="alert">
+                {{'form_send' | translate}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-9 col-11 mx-auto rounded ">
+                <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="col-12 mt-5">
+                    <div class="row">
+                        <div class="mb-3 col-lg-6">
+                            <label for="name" class="form-label">{{'name' | translate}}</label>
+                            <input type="text" name="name"
+                                [ngClass]="{'is-valid': !name.invalid, 'is-invalid': name.invalid && name.touched}"
+                                ngModel required #name="ngModel" class="form-control" id="name" placeholder="Test">
+                            <div class="invalid-feedback" *ngIf="name.invalid && name.touched">
+                                {{'error_empty' | translate}}
+                            </div>
+                        </div>
+                        <div class="mb-3 col-lg-6">
+                            <label for="exampleFormControlInput1" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" ngModel email required
+                                #email="ngModel" id="exampleFormControlInput1" placeholder="name@example.com"
+                                [ngClass]="{'is-valid': !email.invalid, 'is-invalid': email.invalid && email.touched}">
+                            <div class="invalid-feedback" *ngIf="email.invalid && email.touched">
+                                {{'error_email' | translate}}
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">{{'message' | translate}}</label>
+                            <textarea class="form-control" name="messages"
+                                [ngClass]="{'is-valid': !messages.invalid, 'is-invalid': messages.invalid && messages.touched}"
+                                ngModel required #messages="ngModel" id="exampleFormControlTextarea1"
+                                rows="3"></textarea>
+                            <div class="invalid-feedback" *ngIf="messages.invalid && messages.touched">
+                                {{'error_empty' | translate}}
+                            </div>
+
+                        </div>
+                        <button type="submit"
+                            class="btn col-4 btn-{{specialActualColor}} mt-3 mx-auto mb-5">{{'submit' | translate}}</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

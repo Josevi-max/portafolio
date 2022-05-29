@@ -1,0 +1,19 @@
+<div class="container ">
+    <div class="row mx-auto">
+        <div>
+            <app-title-effect [text]="'proyects' | translate" [color]="specialActualColor"></app-title-effect>
+            <p class="text-center">{{'info_proyects' | translate}}</p>
+        </div>
+
+        <div *ngFor="let item of proyectsInfo" class="col-lg-6 col-12 mt-5 mb-5 text-center ">
+            <div class="card mx-auto card-style">
+                <img src="{{item.image}}" class="card-img-top " alt="{{item.name | translate}}">
+                <div class="card-body text-white">
+                    <h5 class="card-title text-uppercase border-bottom pb-2">{{item.name | translate}}</h5>
+                    <p class="card-text">{{item.description | translate}}</p>
+                    <a href="{{item.url}}" class="btn btn-{{specialActualColor}}" target="_blank">{{'visit' | translate}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+#settings {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 1;
+}
+
+#settings .setting {
+    animation: rotation 3s linear infinite;
+}
+
+.color {
+    width: 40px;
+    border-radius: 8px;
+    margin-right: 10px;
+    height: 30px;
+}
+
+.selected {
+    box-shadow: 2px 2px 5px #999;
+    filter: brightness(0.5);
+}
+
+.flag {
+    width: 40px;
+}
+
+@keyframes rotation{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }

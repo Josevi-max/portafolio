@@ -1,0 +1,36 @@
+
+.d-lg-hide { 
+    display: none;
+}
+
+.typed-cursor {
+    color: #fff!important;
+}
+
+.direction-column {
+    flex-direction: column;
+}
+
+.height-300 {
+    max-height: 300px;
+}
+
+.height-500 {
+    max-height: 500px;
+}
+
+@media (max-width: 1200px) {
+    .d-lg {
+        display: none;
+    }
+    .d-lg-hide {
+        display: block;
+        width: 250px;
+        margin: auto;
+        margin-bottom: 50px;
+        margin-top: 150px;
+    }
+    .d-lg-hide img {
+        border-radius: 50rem;
+    }
+}

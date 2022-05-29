@@ -1,0 +1,118 @@
+<div class="container align-items-center complete-height d-flex">
+
+    <div class="row">
+        <app-title-effect [text]="'about_me' |translate" [color]="specialActualColor"></app-title-effect>
+        <div class="col-xl-6 col-12">
+            <img src="../../assets/images/profile20.jpg" alt="" class="w-200 mx-auto d-block mt-5 mb-5">
+            <p>{{"info_about_me" | translate}}</p>
+        </div>
+
+        <div class="col-xl-6 col-12 skills mt-5 ">
+
+            <h3 class="special-border-bottom text-uppercase">{{ "competencies" | translate}}</h3>
+            <div>
+                <h5 class="text-uppercase mt-5 border-bottom pb-2">
+                    Back
+                </h5>
+                <ul>
+                    <li *ngFor="let item of backTecnologies" class="list-unstyled">
+                        <div class="row mt-4">
+                            <span class="col-3 border-end p-0">{{item.language}}</span>
+                            <div class="col-9">
+                                <ngb-progressbar [value]="item.actualValue" type="{{specialActualColor}}"><i
+                                        class="fw-bold btn-{{specialActualColor}} bg-transparent">{{item.actualValue}}0%</i>
+                                </ngb-progressbar>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-uppercase mt-5 border-bottom pb-2">
+                    Front
+                </h5>
+                <ul>
+                    <li *ngFor="let item of frontTecnologies" class="list-unstyled">
+                        <div class="row mt-4">
+                            <span class="col-3 border-end p-0">{{item.language}}</span>
+                            <div class="col-9">
+                                <ngb-progressbar [value]="item.actualValue" type="{{specialActualColor}}"><i
+                                        class="fw-bold btn-{{specialActualColor}} bg-transparent">{{item.actualValue}}0%</i>
+                                </ngb-progressbar>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-uppercase mt-5 border-bottom pb-2">
+                    {{"database" | translate}}
+                </h5>
+                <ul>
+                    <li *ngFor="let item of bd" class="list-unstyled">
+                        <div class="row mt-4">
+                            <span class="col-3 border-end p-0">{{item.language}}</span>
+                            <div class="col-9">
+                                <ngb-progressbar [value]="item.actualValue" type="{{specialActualColor}}"><i
+                                        class="fw-bold btn-{{specialActualColor}} bg-transparent">{{item.actualValue}}0%</i>
+                                </ngb-progressbar>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-uppercase mt-5 border-bottom pb-2">
+                    {{"version" | translate}}
+                </h5>
+                <ul>
+                    <li *ngFor="let item of control" class="list-unstyled">
+                        <div class="row mt-4">
+                            <span class="col-3 border-end p-0">{{item.language}}</span>
+                            <div class="col-9">
+                                <ngb-progressbar [value]="item.actualValue" type="{{specialActualColor}}"><i
+                                        class="fw-bold btn-{{specialActualColor}} bg-transparent">{{item.actualValue}}0%</i>
+                                </ngb-progressbar>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-uppercase mt-5 border-bottom pb-2">
+                    Linux
+                </h5>
+                <ul>
+                    <li *ngFor="let item of so" class="list-unstyled">
+                        <div class="row mt-4">
+                            <span class="col-3 border-end p-0">{{item.language | translate}}</span>
+                            <div class="col-9">
+                                <ngb-progressbar [value]="item.actualValue" type="{{specialActualColor}}"><i
+                                        class="fw-bold btn-{{specialActualColor}} bg-transparent">{{item.actualValue}}0%</i>
+                                </ngb-progressbar>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-uppercase mt-5 border-bottom pb-2">
+                    IDE
+                </h5>
+                <ul>
+                    <li *ngFor="let item of ide" class="list-unstyled">
+                        <div class="row mt-4">
+                            <span class="col-3 border-end p-0">{{item.language}}</span>
+                            <div class="col-9">
+                                <ngb-progressbar [value]="item.actualValue" type="{{specialActualColor}}"><i
+                                        class="fw-bold btn-{{specialActualColor}} bg-transparent">{{item.actualValue}}0%</i>
+                                </ngb-progressbar>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>

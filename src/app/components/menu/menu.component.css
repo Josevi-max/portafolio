@@ -1,0 +1,77 @@
+.icon {
+    width: 50px;
+    font-size: 25px;
+}
+
+.flag {
+    width: 40px;
+}
+
+
+
+#nav li a {
+    color: #fff;
+}
+
+.item-list {
+    position: relative;
+    display: block;
+    padding: 0.5rem 1rem;
+}
+@media (max-width:768px) {
+
+    #nav {
+        background-color: #222222;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100vh;
+    }
+
+    .list-group-item {
+        background-color: #222222;
+        color: #fff;
+    }
+
+    #nav .profile {
+        height: 200px;
+        border-radius: 50rem;
+
+    }
+
+    #nav div span {
+        background-color: #343a40;
+    }
+
+
+}
+
+@media (min-width: 768px) {
+    #nav {
+        width: 260px;
+        height: 100vh;
+        background-color: #222;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: fixed;
+    }
+
+    #nav li {
+        background-color: #222;
+        color: #fff;
+        border-color: #fff;
+    }
+
+    #nav .profile {
+        height: 200px;
+        border-radius: 100%;
+
+    }
+
+    #nav div span {
+        background-color: #343a40;
+    }
+
+}
+

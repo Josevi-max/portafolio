@@ -1,0 +1,22 @@
+<div class="container align-items-center hv-100 d-flex">
+    <div class="row ">
+        <div class="col-12 d-lg-hide text-center">
+            <img src="../../assets/images/profile20.jpg" alt="profile img" class="img-fluid height-300">
+        </div>
+        <div class="col-xl-6  col-12 d-flex justify-content-center direction-column mb-5">
+            <h1> {{ "hello_im" | translate}} <em class="text-{{specialActualColor}}">José Vicente</em></h1>
+            <!-- infinite loop -->
+            <ngx-typed-js [strings]="[ 'developer' | translate, 'autodidact' | translate]" [loop]="true"
+                [typeSpeed]="50" [backSpeed]="40" [backDelay]="2000" [cursorColor]="'#fff'">
+                <h3>{{"im" |translate}} <em class="typing text-{{specialActualColor}}"></em></h3>
+            </ngx-typed-js>
+            <p>{{ "about" | translate}}</p>
+            <a href="../../assets/CV/CV_JoseVicente.pdf"
+                class="btn btn-{{specialActualColor}} rounded-pill mt-3 text-decoration-none fw-bold" target="_blank"
+                download="CV_JoseVicente">{{ "download" |translate}}</a>
+        </div>
+        <div class="col-6 d-lg text-center">
+            <img src="../../assets/images/profile20.jpg" alt="profile img" class="img-fluid height-500">
+        </div>
+    </div>
+</div>

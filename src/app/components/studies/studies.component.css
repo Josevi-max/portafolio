@@ -1,0 +1,11 @@
+.guide {
+    position: absolute;
+    left: -9px;
+    top: 0;
+}
+
+.box {
+    background: #222;
+    width: fit-content;
+    padding: 7px;
+}

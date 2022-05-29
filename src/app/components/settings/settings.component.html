@@ -1,0 +1,28 @@
+<div id="settings">
+        <button type="button" class="btn btn-dark" (click)="collapse.toggle()"
+            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+            <i class="fas fa-cog setting"></i>
+        </button>
+    <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" class="float-end ms-2">
+        
+        <div class="card bg-dark">
+            <i class="fas fa-times-circle text-end mt-3 me-3" (click)="collapse.toggle()"></i>
+            <div class="card-body pt-0">
+                <p class="border-bottom pb-2 text-uppercase">{{ "colors" | translate}}</p>
+                <div class="d-inline-flex">
+                    <p class="bg-danger color {{actualSpecialColor == 'danger' ? 'selected' : ''}}" (click)="changeSpecialColor('danger')"></p>
+                    <p class="bg-warning color {{actualSpecialColor == 'warning' ? 'selected' : ''}}" (click)="changeSpecialColor('warning')"></p>
+                    <p class="bg-info color {{actualSpecialColor == 'info' ? 'selected' : ''}}" (click)="changeSpecialColor('info')"></p>
+                    <p class="bg-primary color {{actualSpecialColor == 'primary' ? 'selected' : ''}}" (click)="changeSpecialColor('primary')"></p>
+                    <p class="bg-success color {{actualSpecialColor == 'success' ? 'selected' : ''}}" (click)="changeSpecialColor('success')"></p>
+                </div>
+                <p class="border-bottom pb-2 text-uppercase">{{ "languages" | translate}}</p>
+                <div class="d-block text-center">
+                    <img [ngClass]="actualLanguage != 'es' ? '' : 'selected'" src="../../assets/images/spain.png" alt="spain flag" (click)="toogleLanguage('es')" class="flag shadow-none">
+                    <img [ngClass]="actualLanguage != 'en' ? '' : 'selected'" src="../../assets/images/united-kingdom.png" alt="united-kingdom flag" (click)="toogleLanguage('en')" class="flag ms-3 shadow-none">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

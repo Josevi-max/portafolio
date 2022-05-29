@@ -1,0 +1,49 @@
+.icon {
+    font-size: 24px;
+    border-radius: 30px;
+    padding: 10px;
+    background: #000;
+    /*margin-top: 20px;
+    margin-right: 30px;*/
+}
+
+.card {
+    background-color: #222;
+}
+
+.container-icon  {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+}
+
+.form-shadow {
+    box-shadow: 10px 5px 10px #fff;
+}
+
+.bg-secondary-page {
+    background-color: #222;
+}
+@media (min-width: 991px) {
+    .center-row {
+        display: flex;
+        height: 70vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .info-mobile {
+        display: none;
+    }
+}
+@media (max-width: 991px) {
+    .info-desktop {
+        display: none;
+    }
+}
+

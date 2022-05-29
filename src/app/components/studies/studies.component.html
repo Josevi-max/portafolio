@@ -1,0 +1,25 @@
+<div class="border-start ps-4 position-relative">
+    <i class="fas fa-circle text-{{color}} guide"></i>
+    <h4 class="text-{{color}}">{{title}}</h4>
+    <div class="box mt-3">
+        {{date}}
+    </div>
+    <div class="mt-3 mb-3 text-uppercase">
+        <a href="{{url}}" target="_blank" class="text-white ">
+            <i class="fas fa-search me-2"></i>
+            <em>{{company}}</em>
+        </a>
+    </div>
+
+    <p class="mb-0 pb-4">{{aboutCompany}}</p>
+    <ul>
+        <li [ngClass]="{'d-none': listItem1 == null }">{{listItem1}}</li>
+        <li [ngClass]="{'d-none': listItem2 == null }">{{listItem2}}</li>
+        <li [ngClass]="{'d-none': listItem3 == null }">{{listItem3}}</li>
+        <li [ngClass]="{'d-none': listItem4 == null }">{{listItem4}}</li>
+        <li [ngClass]="{'d-none': listItem5 == null }">{{listItem5}}</li>
+        <li [ngClass]="{'d-none': listItem6 == null }">{{listItem6}}</li>
+        <li [ngClass]="{'d-none': listItem7 == null }">{{listItem7}}</li>
+        <li [ngClass]="{'d-none': listItem8 == null }">{{listItem8}}</li>
+    </ul>
+</div>
